@@ -13,9 +13,4 @@
     <pt:registry
         path="templates"/>
 
-    <browser:resourceDirectory
-        name="tcbnavbar"
-        directory="resource" />
-
-
 </configure>

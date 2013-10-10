@@ -1,6 +1,8 @@
 Information
 ===========
 
-A template wich provides a media item based search.
+A small template to create a bootstrap designed navbar form a category in portal_actions
 
-Main template id is mediasarch_view
+> <tal:block tal:define="categiries python:['document_actions ']">
+>   <metal:block metal:use-macro="context/tcb_navbar/macros/main"/>
+> </tal:block>
