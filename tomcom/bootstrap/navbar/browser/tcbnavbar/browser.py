@@ -48,7 +48,9 @@ class Browser(BrowserView):
         if IAction.providedBy(item):
             dict_['title']=translate(msgid=getattr(item,'msgid',item.title),domain=item.i18n_domain,default=item.title)
         else:
-            dict_['title']=item.title
+            domain=item.getProperty('domain','plone')
+            msgid=item.getProperty('msgid',item.title)
+            dict_['title']=translate(msgid=msgid,domain=domain,default=item.title)
 
         if IActionCategory.providedBy(item):
             dict_['children']=[]
