@@ -4,7 +4,7 @@
              tal:condition="categories">
     <tal:block tal:define="tcbnavbar nocall:here/@@tcbnavbar;
                            list_ python:tcbnavbar.get(categories)">
-        <ul class="nav">
+        <ul class="nav quicklinks">
             <tal:block tal:repeat="dict_ list_">
                 <li class="dropdown">
                     <a data-toggle="dropdown" class="dropdown-toggle" href="#">
