@@ -13,7 +13,6 @@ setup(name='tomcom.bootstrap.navbar',
       long_description=open("README.rst").read(),
       classifiers=[
         'Framework :: Plone',
-        'Framework :: Plone :: 4.3',
         'Programming Language :: Python',
         'Topic :: Software Development :: Libraries :: Python Modules',
         ],
