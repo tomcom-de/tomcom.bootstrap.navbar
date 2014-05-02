@@ -46,6 +46,17 @@ class Browser(BrowserView):
         dict_={}
 
         if IAction.providedBy(item):
+            show=True
+            if item.available_expr and not Expression(item.available_expr)(getExprContext(context,context)):
+                show=False
+            for permission in item.permissions:
+                if not check_perm(permission):
+                    show=False
+                    return
+            if not show:
+                return
+
+        if IAction.providedBy(item):
             dict_['title']=translate(msgid=getattr(item,'msgid',item.title),domain=item.i18n_domain,default=item.title)
         else:
             domain=item.getProperty('domain','plone')
