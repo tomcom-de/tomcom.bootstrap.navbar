@@ -72,6 +72,7 @@ class Browser(BrowserView):
             dict_['target']=item.getProperty('link_target','_self')
             dict_['class']=item.getProperty('class_','')
             dict_['url']=Expression(item.url_expr)(getExprContext(context,context))
+            dict_['onclick']=item.getProperty('onclick','')
 
         current.append(dict_)
 
